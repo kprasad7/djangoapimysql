@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+  <title>student details</title>
+{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+             <th scope="col">enrollment_id</th>
+             <th scope="col">first_name</th>
+             <th scope="col">last_name</th>
+             <th scope="col">dob</th>
+             <th scope="col">mobile_number</th>
+             <th scope="col">email_id</th>
+           </tr>  
+        </thead>
+        <tbody>
+        {% for showdata in joindata%}
+         <tr>
+             <th scope="row">{{showdata.enrollment_id}}</th>
+             <th scope="row">{{showdata.first_name}}</th>
+             <th scope="row">{{showdata.last_name}}</th>
+             <th scope="row">{{showdata.dob}}</th>
+             <th scope="row">{{showdata.mobile_number}}</th>
+             <th scope="row">{{showdata.email_id}}</th>  
+          </tr>     
+        </tbody>
+      </table>    
+        {% endfor %}
+        
+  </div>
+
+{% endblock content %}

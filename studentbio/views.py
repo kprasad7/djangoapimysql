@@ -10,7 +10,9 @@ from rest_framework.views import APIView
 
 
 class studentdataapi(viewsets.ModelViewSet):
-    queryset=studentdata.objects.raw('CALL `bio`()')
+    #queryset=studentdata.objects.raw('CALL `bio`()')
+    queryset=studentdata.objects.all()
+
     serializer_class=studentdataserializer
 
 def displaydata(request):
